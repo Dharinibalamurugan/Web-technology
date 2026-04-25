@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online College Notice Board - REC</title>
+
+  <!-- 1. EXTERNAL CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- 2. EMBEDDED CSS -->
+  <style>
+    .ticker-bar {
+      background-color: #c8102e;
+      color: white;
+      padding: 8px 20px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      overflow: hidden;
+    }
+    .ticker-label {
+      background: white;
+      color: #c8102e;
+      font-weight: bold;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .ticker-text {
+      white-space: nowrap;
+      animation: scroll-left 25s linear infinite;
+    }
+    @keyframes scroll-left {
+      from { transform: translateX(100%); }
+      to   { transform: translateX(-100%); }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar">
+    <img src="https://www.rajalakshmi.org/_next/image?url=%2Flogo.svg&w=256&q=75"
+         alt="REC Logo">
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#notices">Notices</a>
+      <a href="#map">Campus Map</a>
+      <a href="#contact">Contact</a>
+      <!-- 3. INLINE CSS on this button -->
+      <a href="#notices" class="nav-btn"
+         style="font-weight:bold; letter-spacing:0.5px;">
+        View Notices
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========== TICKER ========== -->
+  <div class="ticker-bar">
+    <span class="ticker-label">LATEST</span>
+    <span class="ticker-text">
+      📌 Mid-Term Exam Schedule Released &nbsp;|&nbsp;
+      📌 TECHVISTA 2025 Registrations Open &nbsp;|&nbsp;
+      📌 Tamil New Year Holiday – 14th April &nbsp;|&nbsp;
+      📌 Library Book Return Deadline – 25th April
+    </span>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <h1>Online College Notice Board</h1>
+    <p>Department of AI & Data Science — Rajalakshmi Engineering College</p>
+    <a href="#notices" class="hero-btn">View All Notices</a>
+  </section>
+
+  <!-- ========== NOTICES SECTION ========== -->
+  <section id="notices">
+    <h2 class="section-title">Latest Notices</h2>
+    <div class="section-line"></div>
+
+    <div class="notices-grid">
+
+      <div class="notice-card">
+        <span class="tag">EXAM</span>
+        <h3>Mid-Term Exam Schedule – April 2025</h3>
+        <p>Exams from 14th April to 20th April. Collect hall tickets before 10th April from the department office.</p>
+      </div>
+
+      <div class="notice-card">
+        <span class="tag">EVENT</span>
+        <h3>TECHVISTA 2025 – National Symposium</h3>
+        <p>Register before 10th April for Paper Presentation, Code Sprint & AI Quiz. Cash prizes worth ₹50,000!</p>
+      </div>
+
+      <div class="notice-card">
+        <span class="tag">HOLIDAY</span>
+        <h3>Tamil New Year Holiday – 14th April</h3>
+        <p>College will remain closed on 14th April 2025. Rescheduled classes will be announced separately.</p>
+      </div>
+
+      <div class="notice-card">
+        <span class="tag">GENERAL</span>
+        <h3>Library Books Return Reminder</h3>
+        <p>Return all borrowed books before 25th April. Fine of ₹5 per day after due date.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== GOOGLE MAP (iframe) ========== -->
+  <section class="map-section" id="map">
+    <h2 class="section-title">Campus Location</h2>
+    <div class="section-line"></div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d80.0286!3d13.1827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52618b7e937a3b%3A0x7b1b2b2b2b2b2b2b!2sRajalakshmi%20Engineering%20College!5e0!3m2!1sen!2sin!4v1"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- ========== IMAGE MAP (Hotspot) ========== -->
+  <section class="hotspot-section" id="campus">
+    <h2 class="section-title">Campus Zones</h2>
+    <div class="section-line"></div>
+    <p style="color:#666; margin-bottom:20px;">
+      Click on a campus zone to learn more.
+    </p>
+
+    <!-- Image Map -->
+    <img src="https://www.rajalakshmi.org/_next/image?url=https%3A%2F%2Fcms.rajalakshmi.org%2Fapi%2Fmedia%2Ffile%2FWeb%25201%2520(1).png&w=3840&q=75"
+         alt="REC Campus" usemap="#campusmap" width="750">
+
+    <map name="campusmap">
+      <area shape="rect" coords="0,0,250,300"
+            href="#notices" alt="Academic Block"
+            title="Academic Block – Click to view notices">
+      <area shape="rect" coords="250,0,500,300"
+            href="#map" alt="Library"
+            title="Central Library">
+      <area shape="rect" coords="500,0,750,300"
+            href="#contact" alt="Admin Block"
+            title="Admin Block – Contact">
+    </map>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="contact">
+    <div>
+      <h4>NOTICE BOARD</h4>
+      <a href="#notices">All Notices</a>
+      <a href="#notices">Exam Notices</a>
+      <a href="#notices">Event Notices</a>
+      <a href="#notices">Holiday Notices</a>
+    </div>
+    <div>
+      <h4>ACADEMICS</h4>
+      <a href="#">Departments</a>
+      <a href="#">Timetable</a>
+      <a href="#">Academic Schedule</a>
+      <a href="#">Results</a>
+    </div>
+    <div>
+      <h4>IMPORTANT LINKS</h4>
+      <a href="#">Anti Ragging</a>
+      <a href="#">HelpDesk</a>
+      <a href="#">NIRF</a>
+      <a href="#">Grievance Portal</a>
+    </div>
+    <div>
+      <h4>ADDRESS</h4>
+      <p style="font-size:13px; line-height:1.8; color:#aaa;">
+        Rajalakshmi Nagar,<br>
+        Thandalam,<br>
+        Tamil Nadu – 602105<br><br>
+        📞 44-26442472<br>
+        ✉ admin@rajalakshmi.edu.in
+      </p>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    © 2025 Rajalakshmi Engineering College &nbsp;|&nbsp; Online College Notice Board
+  </div>
+
+</body>
+</html>
+
+
