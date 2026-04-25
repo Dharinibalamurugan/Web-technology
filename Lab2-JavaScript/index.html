@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notice Submission Form - REC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <img src="https://www.rajalakshmi.org/_next/image?url=%2Flogo.svg&w=256&q=75"
+         alt="REC Logo">
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Notices</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- FORM SECTION -->
+  <div class="form-wrapper">
+    <h2>📋 Submit a Notice Request</h2>
+    <p class="form-sub">Department of AI & Data Science — REC</p>
+
+    <form id="noticeForm" onsubmit="return validateForm()">
+
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" id="firstName" placeholder="Enter first name">
+        <span class="error" id="errFirstName"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" id="lastName" placeholder="Enter last name">
+        <span class="error" id="errLastName"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Email ID</label>
+        <input type="text" id="email" placeholder="name@domain.com">
+        <span class="error" id="errEmail"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" placeholder="10-digit mobile number">
+        <span class="error" id="errMobile"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Min 6 characters">
+        <span class="error" id="errPassword"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Address</label>
+        <textarea id="address" placeholder="Enter your address"></textarea>
+        <span class="error" id="errAddress"></span>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Notice Request</button>
+
+      <div class="success-msg" id="successMsg" style="display:none;">
+        ✅ Form submitted successfully!
+      </div>
+
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-bottom">
+    © 2025 Rajalakshmi Engineering College | Online College Notice Board
+  </div>
+
+  <script src="validation.js"></script>
+
+</body>
+</html>
