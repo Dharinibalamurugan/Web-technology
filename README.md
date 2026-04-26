@@ -1,2 +1,2 @@
-# web-technology-lab--1-
+# web-technology
 WTMA Lab Experiments - Online College Notice Board
